@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
     display: flex;
     justify-content: center;
@@ -18,8 +23,14 @@ body{
     overflow: hidden;
     height: 70vh;
 }
-.container img{
-    width: 50%;
+.img-container{
+    display: flex;
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+}
+.img-container img{
+    width: 100%;
     height: 100%;
 }
 .details{
@@ -28,6 +39,7 @@ body{
     align-items: flex-start;
     flex-direction: column;
     padding: 30px;
+    width: 50%;
     height: 100%;
     gap: 15px;
 }
@@ -87,4 +99,34 @@ button{
 }
 button:hover{
     filter: brightness(0.9);
+}
+@media (max-width:650px) {
+    .container{
+        flex-direction: column;
+        width: 350px;
+        height: 600px;
+    }
+    .img-container{
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+    .details{
+        width: 100%;
+    }
+    .container img{
+        transform: translateY(-50px);
+        width: 100%;
+        height: 350px;
+    }
+    .perfume{
+        padding: 0;
+    }
+    .paragraph{
+        margin: 0;
+    }
+    #cart{
+        width: 5px;
+        height: 5px;
+    }
 }
